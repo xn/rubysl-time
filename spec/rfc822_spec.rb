@@ -1,4 +1,3 @@
-require File.expand_path('../../../spec_helper', __FILE__)
 require File.expand_path('../shared/rfc2822', __FILE__)
 require 'time'
 
