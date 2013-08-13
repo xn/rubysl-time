@@ -1,7 +1,2 @@
-require "rubysl-time/version"
-
-module RubySL
-  module Time
-    # Your code goes here...
-  end
-end
+require "rubysl/time/version"
+require "rubysl/time/time"
