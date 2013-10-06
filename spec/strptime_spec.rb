@@ -1,0 +1,17 @@
+require 'time'
+
+describe "Time#strptime" do
+
+  it "parses number of seconds since Unix Epoch" do
+    Time.strptime('0', '%s').should == Time.at(0)
+  end
+
+  it "parses number of seconds since Unix Epoch as UTF" do
+    Time.strptime('0', '%s').utc_offset.should == 0
+  end
+
+  it "parses number of seconds since Unix Epoch with timezone" do
+    Time.strptime('0 +0100', '%s %z').utc_offset.should == Time.at(0).getlocal('+01:00').utc_offset
+  end
+
+end
