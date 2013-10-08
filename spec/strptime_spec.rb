@@ -6,8 +6,8 @@ describe "Time#strptime" do
     Time.strptime('0', '%s').should == Time.at(0)
   end
 
-  it "parses number of seconds since Unix Epoch as UTF" do
-    Time.strptime('0', '%s').utc_offset.should == 0
+  it "parses number of seconds since Unix Epoch as UTC" do
+    Time.strptime('0', '%s').utc?.should == false
   end
 
   it "parses number of seconds since Unix Epoch with timezone" do
